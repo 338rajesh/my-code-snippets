@@ -1,0 +1,8 @@
+Julia 
+"C:\Users\rajeshnakka\AppData\Local\Programs\Julia160\bin\julia.exe" -i "$(FULL_CURRENT_PATH)"
+
+FreeCAD
+"C:\Program Files\FreeCAD 0.19\bin\FreeCADCmd.exe" -i "$(FULL_CURRENT_PATH)"
+
+Python 2.7
+"C:\Users\admin\Miniconda2\python.exe" -i "$(FULL_CURRENT_PATH)"

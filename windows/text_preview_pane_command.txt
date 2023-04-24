@@ -1,0 +1,3 @@
+# makes the text based files with extension 'extn' to preview in windows explorer pane
+
+	`reg add HKCU\SOFTWARE\Classes\.extn /v PerceivedType /t REG_SZ /d text`

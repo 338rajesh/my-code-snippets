@@ -1,0 +1,33 @@
+pair C = (0.0, 0.0);
+real a = 2.0;
+real b = 1.0;
+real rc = 0.2;
+real tht = pi/3;
+real cth = cos(tht);
+real sth = sin(tht);
+//
+pair C1 	= (C.x + (a-rc) * cth - (b-rc) * sth, C.y + (a-rc) * sth + (b-rc) * cth);
+pair C1p1	= (C.x + a * cth - (b-rc) * sth, C.y + a * sth + (b-rc) * cth);
+pair C1p2	= (C.x + (a-rc) * cth - b * sth, C.y + (a-rc) * sth + b * cth);
+
+pair C2 	= (C.x - (a-rc) * cth - (b-rc) * sth, C.y - (a-rc) * sth + (b-rc) * cth);
+pair C2p1	= (C.x - (a-rc) * cth - b * sth, C.y - (a-rc) * sth + b * cth);
+pair C2p2	= (C.x - a * cth - (b-rc) * sth, C.y - a * sth + (b-rc) * cth);
+
+
+pair C3 = (C.x - (a-rc) * cth + (b-rc) * sth, C.y - (a-rc) * sth - (b-rc) * cth);
+pair C3p1	= (C.x - a * cth + (b-rc) * sth, C.y - a * sth - (b-rc) * cth);
+pair C3p2	= (C.x - (a-rc) * cth + b * sth, C.y - (a-rc) * sth - b * cth);
+
+
+pair C4 = (C.x + (a-rc) * cth + (b-rc) * sth, C.y + (a-rc) * sth - (b-rc) * cth);
+pair C4p1	= (C.x + (a-rc) * cth + b * sth, C.y + (a-rc) * sth - b * cth);
+pair C4p2	= (C.x + a * cth + (b-rc) * sth, C.y + a * sth - (b-rc) * cth);
+
+size(3cm);
+path rounded_rect = (arc(C1, C1p1, C1p2)--arc(C2, C2p1, C2p2)--arc(C3, C3p1, C3p2)--arc(C4, C4p1, C4p2)--cycle);
+
+pen solidPen1=blue+linewidth(0.2); 
+
+
+draw(rounded_rect, solidPen1);
