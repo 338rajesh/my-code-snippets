@@ -1,0 +1,14 @@
+poetry run black . --check  # To test
+poetry run black .  # To format using black
+poetry run black . --check  # To test
+poetry run isort . --check-only --profile black  # import sorting checking
+poetry run isort . --profile black  # import sorting
+
+
+# To set the maximum line length in flake8
+1. create .flake8 file in root, if doesn't exist
+2. Add `max-line-length = 120` under [flake8] as
+	[flake8]
+	max-line-length = 120
+
+

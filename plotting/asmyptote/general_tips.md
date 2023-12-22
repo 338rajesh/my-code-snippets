@@ -39,3 +39,15 @@
 ### Arrays
 + `real[] A = {5.0, 60.0, 23.3};` defines a 1D array of real numbers
 + `A.length` gives 3
+
+
+
+### File handling
++ In latex write the asy code in a file, for example `drawing.asy`
++ Then place the following code in \begin{asy} ... \end{asy} environment
+  `include "/path/to/drawing.asy";`
+
+
+
++ `usepackage("amsfonts");` replace `amsfonts` with required latex package 
++ 

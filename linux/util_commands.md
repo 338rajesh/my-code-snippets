@@ -74,4 +74,7 @@
 ### 7za
 + Append file(s)
   + 7za a ~/file_name.7z /path/to/target/directories
-  + 
+  
+
+
++ `cat homogenization_lump*[5-6]*`
