@@ -1,21 +1,28 @@
-import matplotlib.pyplot as plt
+from matplotlib.pyplot import rcParams
+from matplotlib import rcParamsDefault
 
-plt.rcParams["text.usetex"] = True
-plt.rcParams['font.size'] = 25.0
-plt.rcParams["font.family"] = "Times New Roman"
-plt.rcParams['xtick.bottom'] = True
-plt.rcParams['xtick.top'] = True
-plt.rcParams['ytick.left'] = True
-plt.rcParams['ytick.right'] = True
-plt.rcParams['xtick.labelbottom'] = True
-plt.rcParams['xtick.labeltop'] = False
-plt.rcParams['ytick.labelleft'] = True
-plt.rcParams['ytick.labelright'] = False
-plt.rcParams['xtick.direction'] = 'in'
-plt.rcParams['ytick.direction'] = 'in'
-plt.rcParams['xtick.major.size'] = 8
-plt.rcParams['ytick.major.size'] = 8
-plt.rcParams['xtick.minor.size'] = 4
-plt.rcParams['ytick.minor.size'] = 4
-plt.rcParams['xtick.major.width'] = 2
-plt.rcParams['ytick.major.width'] = 2
+
+def invoke(tx=True, fs=25.0):
+    rcParams["text.usetex"] = tx
+    rcParams['font.size'] = fs
+    rcParams["font.family"] = "Times New Roman"
+    rcParams['xtick.bottom'] = True
+    rcParams['xtick.top'] = True
+    rcParams['ytick.left'] = True
+    rcParams['ytick.right'] = True
+    rcParams['xtick.labelbottom'] = True
+    rcParams['xtick.labeltop'] = False
+    rcParams['ytick.labelleft'] = True
+    rcParams['ytick.labelright'] = False
+    rcParams['xtick.direction'] = 'in'
+    rcParams['ytick.direction'] = 'in'
+    rcParams['xtick.major.size'] = 8
+    rcParams['ytick.major.size'] = 8
+    rcParams['xtick.minor.size'] = 4
+    rcParams['ytick.minor.size'] = 4
+    rcParams['xtick.major.width'] = 2
+    rcParams['ytick.major.width'] = 2
+
+
+def revoke():
+    rcParams.update(rcParamsDefault)
