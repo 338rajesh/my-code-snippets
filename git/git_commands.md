@@ -26,3 +26,8 @@
 + To update a branch_1 from another branch_0
 	* `git checkout branch_1`
 	* `git merge branch_0`
++ Count the number of lines in a repo: From repo directory 
+	`git ls-files | xargs cat | wc -l`  # lists total number of lines
+	`git ls-files | xargs wc -l`  # lists the number of lines for each file
+	`git ls-files | xargs wc -l | sort -n`  # lists the number of lines for each file and sorts in increasing order
+	`git ls-files | xargs wc -l | sort -rn`  # lists the number of lines for each file and sorts in decreasing order
