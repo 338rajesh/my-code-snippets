@@ -1,0 +1,6 @@
+{
+    "shell_cmd": "asy -noV -f pdf -o \"$file_path/output/$file_base_name.pdf\" \"$file\"",
+    "selector": "source.asy",
+    "working_dir": "$file_path"
+}
+ 
